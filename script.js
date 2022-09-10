@@ -13,7 +13,7 @@ const getApi = async () => {
 getApi()
 
 const postApi = async () => {
-    const response = await fetch(api, {
+    const response = await fetch(api , {
         method: 'POST',
         body: JSON.stringify({
             "chave": "outro valor"
@@ -22,7 +22,7 @@ const postApi = async () => {
             "Content-Type": "application/json"
         }
     })
-    const data = response.json();
+    const data = await response.json();
     return data
 }
 
