@@ -1,5 +1,7 @@
-[
-    {
-        "chave": "valor"
-    }
-]
+{
+    "teste":[
+        {
+            "chave": "valor"
+        }
+    ]
+}

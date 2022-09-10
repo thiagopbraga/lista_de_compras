@@ -5,8 +5,8 @@ const $root = document.getElementById("root")
 const getApi = async () => {
     const response = await fetch(api)
     const data = await response.json()
-    for ( let i = 0; i < data.length; i++){
-        console.log(data[i].chave)
+    for ( let i = 0; i < data.teste.length; i++){
+        console.log(data.teste[i].chave)
     }
     return data
     }
