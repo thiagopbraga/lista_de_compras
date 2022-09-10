@@ -11,19 +11,3 @@ const getApi = async () => {
     return data
     }
 getApi()
-
-const postApi = async () => {
-    const response = await fetch(api , {
-        method: 'POST',
-        body: JSON.stringify({
-            "chave": "outro valor"
-        }),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    const data = await response.json();
-    return data
-}
-
-postApi()
