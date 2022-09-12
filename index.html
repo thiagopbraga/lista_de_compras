@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Api</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <header class="header">
+        <div><span class="title">Welcome, little one!</span></div>
+        <div class="logo">Logo</div>
+        <div class="menu">
+            <button class="btn-signIn">Sign In</button>
+            <button class="btn-logIn">Login</button>
+        </div>
+    </header>
     <div id="root">
+
+        <div class="signInForm">
+            <!-- Form for sign in -->
+            <form>
+                <div class="labelInput">
+                    <label for="">Tell me what your mommy calls you</label>
+                    <input type="text" placeholder="Name" id="nameSignIn">
+                </div>
+                <div class="labelInput">
+                    <label for="">Pass your mail adress</label>
+                    <input type="text" placeholder="Mail" id="mailSignIn">
+                </div>
+                <div class="labelInput">
+                    <label for="">How I will call you if I don't had your number?</label>
+                    <input type="text" placeholder="Number" id="numberSignIn">
+                </div>
+                <div class="labelInput">
+                    <label for="">Trust me, we don't will show this to nobody (If they don't pay)</label>
+                    <input type="text" placeholder="Password" id="passwordSignInOne">
+                </div>
+                <div class="labelInput">
+                    <label for="">Repeat please</label>
+                    <input type="text" placeholder="Confirm Password" id="passwordSignIntwo">
+                </div>
+                <div class="labelInput" >
+                    <button type="submit" class="btn-confirm-signIn" id="confirm">Sign In</button>
+                </div>
+            </form>
+        </div>
 
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
