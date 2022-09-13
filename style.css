@@ -120,6 +120,24 @@
     gap: 10px;
 }
 
+.rowDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.rowDiv button {
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: var(--light-grey);
+    color: #000;
+}
+
 .rowDivList {
     display: flex;
     align-items: center;

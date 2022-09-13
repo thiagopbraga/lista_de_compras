@@ -47,8 +47,11 @@
         </form>
     </div> -->
     <div id="root">
-        <span style="margin-top: 5px;">Valor total:</span>
-        <div class="valorTotal"></div>
+        <div class="rowDiv">
+            <span style="margin-top: 5px;">Valor total:</span>
+            <div class="valorTotal"></div>
+            <button onclick="calcValorTotal()">Calcular</button>
+        </div>
         <div class="newOne">
             <input type="text" placeholder="Adicionar a lista..." id="newOneOnList">
             <button class="addNewOne" onclick="addItem()">+</button>

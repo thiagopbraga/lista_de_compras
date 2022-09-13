@@ -31,7 +31,3 @@ const calcValorTotal = () => {
     valorTotal.innerHTML = total;
     return total;
 }
-
-setTimeout(() => {
-    calcValorTotal();
-}, 1000);
