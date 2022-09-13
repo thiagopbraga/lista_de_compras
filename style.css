@@ -26,14 +26,19 @@
 }
 
 .header .title {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
+}
+
+.header .menu {
+    display: flex;
+    flex-direction: row;
 }
 
 .btn-logIn {
     background-color: var(--light-grey);
     color: #000;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 900;
@@ -45,7 +50,7 @@
 .btn-signIn {
     background-color: #251D3B;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 12px;
@@ -78,11 +83,104 @@
 
 #root {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.signInForm {
+#newOneOnList {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.addNewOne {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    border:none;
+    margin: 10px;
+}
+
+.addNewOne:hover {
+    background-color: var(--quinary-color);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.rowDivList {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 25rem;
+}
+
+.itemList {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 20rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    list-style: none;
+}
+
+.itemListName {
+    font-size: 15px;
+    font-weight: 700;
+    width: 15rem;
+}
+
+.itemListValue {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 5rem;
+}
+
+.removeItem {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+    border:none;
+    margin: 10px;
+}
+
+.valorTotal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--primary-color);
+    width:10rem;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+/* ===================================== */
+
+/* .signInForm {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +188,6 @@
     padding: 20px;
     border: 1px solid #ccc;
     margin: 20px;
-    width: 30%;
 }
 
 .labelInput {
@@ -110,4 +207,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-}
+} */
+
