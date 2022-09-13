@@ -31,3 +31,13 @@ const calcValorTotal = () => {
     valorTotal.innerHTML = total;
     return total;
 }
+
+/* remover item */
+const removeItem = (e) => {
+    e.target.parentNode.parentNode.remove();
+    calcValorTotal();
+}
+
+/* adicionar evento de click no botão */
+const btnAddItem = document.querySelector('.addNewOne');
+btnAddItem.addEventListener('click', addItem);
