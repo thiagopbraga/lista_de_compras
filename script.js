@@ -11,9 +11,6 @@ const addItem = () => {
             ${newOneOnList.value}
         </div>
         <input type="number" placeholder="Valor..." class="itemListValue">
-        <div class="itemListRemove">
-            <button class="removeItem">Remover</button>
-        </div>
     `;
     lista.appendChild(item);
     newOneOnList.value = null;
@@ -31,13 +28,3 @@ const calcValorTotal = () => {
     valorTotal.innerHTML = total;
     return total;
 }
-
-/* remover item */
-const removeItem = (e) => {
-    e.target.parentNode.parentNode.remove();
-    calcValorTotal();
-}
-
-/* adicionar evento de click no botão */
-const btnAddItem = document.querySelector('.addNewOne');
-btnAddItem.addEventListener('click', addItem);
