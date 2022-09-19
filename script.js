@@ -10,7 +10,10 @@ const addItem = () => {
         <div class="itemListName">
             ${newOneOnList.value}
         </div>
-        <input type="number" placeholder="Valor..." class="itemListValue">
+        <div class="itemList">
+            <input type="number" placeholder="Quantidade..." class="qntItemListValue">
+            <input type="number" placeholder="Valor..." class="itemListValue">
+        </div>
         <button class="removeItem" onclick="removeItemFromList(${document.querySelectorAll('.rowDivList').length})">Remover</button>
     `;
     lista.appendChild(item);
@@ -24,9 +27,9 @@ const itemListValue = document.querySelectorAll('.itemListValue');
 const calcValorTotal = () => {
     let total = 0;
     for (let i = 0; i < document.querySelectorAll('.itemListValue').length; i++) {
-        total += Number(document.querySelectorAll('.itemListValue')[i].value);
+        total += Number(document.querySelectorAll('.itemListValue')[i].value * document.querySelectorAll('.qntItemListValue')[i].value);
     }
-    valorTotal.innerHTML = total;
+    valorTotal.innerHTML = parseFloat(total).toFixed(2);
     saveList();
     return total;
 }
@@ -37,6 +40,7 @@ const saveList = () => {
     for (let i = 0; i < document.querySelectorAll('.itemListName').length; i++) {
         list.push({
             name: document.querySelectorAll('.itemListName')[i].innerHTML,
+            quant: document.querySelectorAll('.qntItemListValue')[i].value,
             value: document.querySelectorAll('.itemListValue')[i].value
         });
     }
@@ -54,7 +58,10 @@ const loadList = () => {
             <div class="itemListName">
                 ${list[i].name}
             </div>
-            <input type="number" value="${list[i].value}" class="itemListValue">
+            <div class="itemList">
+                <input type="number"value="${list[i].quant}" class="qntItemListValue">
+                <input type="number" value="${list[i].value}"class="itemListValue">
+            </div>
             <button class="removeItem" onclick="removeItemFromList(${i})">Remover</button>
         `;
         lista.appendChild(item);
@@ -81,4 +88,17 @@ const removeItemFromList = (index) => {
 /* verificar se existe lista no localStorage */
 if (localStorage.getItem('list')) {
     loadList();
+    calcValorTotal();
+}
+
+/* guardar compra para criar outra compra */
+
+const saveCompra = () => {
+    nomeCompra = prompt('Nome da compra');
+    let compra = {
+        list: JSON.parse(localStorage.getItem('list')),
+        total: valorTotal.innerHTML
+    }
+    localStorage.setItem(nomeCompra, JSON.stringify(compra));
+    clearList();
 }
