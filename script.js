@@ -82,9 +82,8 @@ const clearList = () => {
 const removeItemFromList = (index) => {
     let list = JSON.parse(localStorage.getItem('list'));
     list.splice(index, 1);
-    localStorage.setItem('list', null);
     localStorage.setItem('list', JSON.stringify(list));
-    lista.innerHTML = '';
+    clearList();
     loadList();
     calcValorTotal();
 }
