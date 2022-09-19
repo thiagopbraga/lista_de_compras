@@ -183,7 +183,7 @@
 
 .removeItem {
     background-color: var(--secondary-color);
-    color: #fff;
+    color: #fff!important;
     padding: 10px 10px;
     border-radius: 5px;
     text-decoration: none;
@@ -192,6 +192,11 @@
     cursor: pointer;
     border:none;
     margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.removeItem:hover {
+    background-color: var(--quaternary-color);
 }
 
 .valorTotal {

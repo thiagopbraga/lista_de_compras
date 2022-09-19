@@ -1,9 +1,13 @@
 const newOneOnList = document.querySelector('#newOneOnList');
 const lista = document.querySelector('#list');
 const valorTotal = document.querySelector('.valorTotal');
-
+const form = document.querySelector('form');
 /* adicionar item na lista */
 const addItem = () => {
+    /* prevent default form */
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    });
     const item = document.createElement('div');
     item.classList.add('rowDivList');
     item.innerHTML = `
@@ -14,7 +18,7 @@ const addItem = () => {
             <input type="number" placeholder="Quantidade..." class="qntItemListValue">
             <input type="number" placeholder="Valor..." class="itemListValue">
         </div>
-        <button class="removeItem" onclick="removeItemFromList(${document.querySelectorAll('.rowDivList').length})">Remover</button>
+        <button class="removeItem" onclick="removeItemFromList(${document.querySelectorAll('.rowDivList').length})"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="216" y1="56" x2="40" y2="56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="104" y1="104" x2="104" y2="168" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="152" y1="104" x2="152" y2="168" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><path d="M200,56V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M168,56V40a16,16,0,0,0-16-16H104A16,16,0,0,0,88,40V56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg></button>
     `;
     lista.appendChild(item);
     newOneOnList.value = null;
@@ -62,7 +66,7 @@ const loadList = () => {
                 <input type="number"value="${list[i].quant}" class="qntItemListValue">
                 <input type="number" value="${list[i].value}"class="itemListValue">
             </div>
-            <button class="removeItem" onclick="removeItemFromList(${i})">Remover</button>
+            <button class="removeItem" onclick="removeItemFromList(${i})"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="216" y1="56" x2="40" y2="56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="104" y1="104" x2="104" y2="168" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="152" y1="104" x2="152" y2="168" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><path d="M200,56V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M168,56V40a16,16,0,0,0-16-16H104A16,16,0,0,0,88,40V56" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg></button>
         `;
         lista.appendChild(item);
     }
