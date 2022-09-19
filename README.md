@@ -17,3 +17,5 @@ Nele você pode deixar o papelzinho com a lista em casa e levá-lo no celular:
 - E não se preocupe, caso precise fechar seu navegador a sua lista é salva no momento em que você  clicar no botão de Calcular.
 
 [Acesse por este link](https://thiagopbraga.github.io/lista_de_compras/)
+
+![Imagem Lista de compras (mobile)](img/mobile_lista_de_compras.jpeg)
