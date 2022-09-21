@@ -2,6 +2,8 @@ const newOneOnList = document.querySelector('#newOneOnList');
 const lista = document.querySelector('#list');
 const valorTotal = document.querySelector('.valorTotal');
 const form = document.querySelector('form');
+const calcular = document.querySelector('.calcular');
+
 /* adicionar item na lista */
 const addItem = () => {
     /* prevent default form */
@@ -48,7 +50,14 @@ const saveList = () => {
             value: document.querySelectorAll('.itemListValue')[i].value
         });
     }
-    console.log(list)
+    console.log(list.length)
+    document.addEventListener('click', () => {
+        if(list == null || list.length == 0) {
+            calcular.innerHTML = 'Salvar';
+        } else {
+            calcular.innerHTML = 'Calcular';
+        }
+    })
     localStorage.setItem('list', JSON.stringify(list));
 }
 
