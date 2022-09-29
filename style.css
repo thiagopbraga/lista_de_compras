@@ -120,6 +120,11 @@
     gap: 10px;
 }
 
+#list {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .rowDiv {
     display: flex;
     align-items: center;
